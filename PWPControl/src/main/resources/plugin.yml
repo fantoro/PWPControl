@@ -1,0 +1,43 @@
+name: PWPControl
+description: Lets you control prior-work penalty on your server
+main: com.fantorovevo.PWPControl.PWPControl
+version: 0.0.2
+author: fantoro
+website: http://fantorovevo.com/
+commands:
+  itempwp:
+    description: Get or set the prior-work penalty value of an item you're holding
+    usage: "Usage: /<command> get|set [value]"
+    aliases:
+    - ipwp
+  pwpconfig:
+    description: Enable or disable prior-work penalty
+    usage: "Usage: /pwpconfig enable|disable"
+permissions:
+  pwpcontrol.itempwp.*:
+    description: Gives access to all /itempwp commands
+    children:
+      pwpcontrol.itempwp.get: true
+      pwpcontrol.itempwp.set: true
+  pwpcontrol.pwpconfig.*:
+    description: Gives access to all /pwpconfig commands
+    children:
+      pwpcontrol.pwpconfig.enable: true
+      pwpcontrol.pwpconfig.disable: true
+  pwpcontrol.*:
+    description: Gives access to all pwpcontrol commands
+    children:
+      pwpcontrol.itempwp.*: true
+      pwpcontrol.pwpconfig.*: true
+  pwpcontrol.itempwp.get:
+    description: Allows you to get the prior-work penalty value
+    default: true
+  pwpcontrol.itempwp.set:
+    description: Allows you to set the prior-work penalty value
+    defalt: op
+  pwpcontrol.pwpconfig.enable:
+    description: Allows you to enable prior-work penalty
+    default: op
+  pwpcontrol.pwpconfig.disable:
+    description: Allows you to disable prior-work penalty
+    default: op
