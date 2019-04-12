@@ -30,15 +30,11 @@ public final class PWPControl extends JavaPlugin {
 	private Logger log = getLogger();
 	private AnvilListener anvListener;
 	
-	@Override public void onEnable() {
-		/*log.info("Registering /checkpwp's command executor.");
-		CheckPWPCommandExecutor executor = new CheckPWPCommandExecutor(this);
-		this.getCommand("checkpwp").setExecutor(executor);*/
-		
+	@Override public void onEnable() {	
 		/*
-		 * Check if a config exists, make a new one based on the default config if it doesn't exist
+		 * print out copyright notice
 		 */
-		
+		log.info("PWPControl Copyright (C) 2019 fantoro\nThis program comes with ABSOLUTELY NO WARRANTY;\nThis is free software, and you are welcome to redistribute it under certain conditions;");
 		
 		/*
 		 * register commands
@@ -54,8 +50,6 @@ public final class PWPControl extends JavaPlugin {
 		anvListener = new AnvilListener(this);
 	}
 	@Override public void onDisable() {
-		//log.info("PWPControl has been disabled");
-		
 		/*
 		 * unregister events
 		 */
