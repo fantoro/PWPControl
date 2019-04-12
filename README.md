@@ -32,3 +32,6 @@ A Bukkit plugin that lets you enable/disable prior-work penalty or edit/check th
 
    Access to /pwpconfig disable
 
+## Building
+
+Just run `mvn install` in `./PWPControl/`.
